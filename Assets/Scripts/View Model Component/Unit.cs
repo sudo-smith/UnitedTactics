@@ -62,10 +62,13 @@ public class Unit : MonoBehaviour
     }
 
     public void select(){
-        gameObject.transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_EmissiveColor", selectedEmColor);
+        // Debug.Log(GetComponent<Renderer>());
+        Debug.Log(gameObject.transform.GetChild(1).GetComponent<Renderer>());
+        Debug.Log(gameObject.GetComponent<Renderer>());
+        gameObject.transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_EmissionColor", selectedEmColor);
     }
 
     public void deselect(){
-        gameObject.transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_EmissiveColor", baseEmColor);
+        gameObject.transform.GetChild(1).GetComponent<Renderer>().material.SetColor("_EmissionColor", baseEmColor);
     }
 }

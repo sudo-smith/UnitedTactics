@@ -22,6 +22,7 @@ public class MoveTargetState : BattleState
     public override void Exit()
     {
         base.Exit();
+        owner.currentUnit.deselect();
         board.DeSelectTiles(tiles);
         tiles = null;
     }
