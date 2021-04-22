@@ -1,0 +1,7 @@
+# not sure why * doesn't work. Because of that also need to ignore Library and Temp
+*.*
+Library/**
+Temp/**
+!.gitignore
+!*.cs
+Assets/PostProcessing/**
